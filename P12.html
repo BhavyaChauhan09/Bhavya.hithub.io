@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Laxmi Institute of Technology</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+body{
+margin:0;
+font-family:'Segoe UI', Verdana, sans-serif;
+background:#f5f2ec;
+scroll-behavior:smooth;
+}
+/* Header */
+header{
+background:#5c1a1a;
+color:white;
+text-align:center;
+padding:25px;
+}
+header h1{
+margin:0;
+font-size:36px;
+letter-spacing:1px;
+}
+header p{
+margin-top:8px;
+font-size:16px;
+font-style:italic;
+color:#f0d9a8;
+}
+/* Navigation */
+nav{
+background:#8a2d2d;
+text-align:center;
+padding:12px;
+position:sticky;
+top:0;
+z-index:100;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+font-size:15px;
+padding-bottom:4px;
+border-bottom:2px solid transparent;
+}
+nav a:hover{
+color:#f0d9a8;
+}
+nav a.active{
+color:#f0d9a8;
+border-bottom:2px solid #f0d9a8;
+}
+/* Banner */
+.banner{
+background:#f0d9a8;
+text-align:center;
+padding:55px;
+font-size:32px;
+font-weight:bold;
+color:#5c1a1a;
+}
+/* Container */
+.container{
+width:90%;
+margin:auto;
+padding:20px;
+}
+/* Card */
+.card{
+background:white;
+border:2px solid #5c1a1a;
+border-radius:10px;
+padding:20px;
+margin-bottom:20px;
+scroll-margin-top:70px;
+}
+h2{
+color:#5c1a1a;
+border-bottom:2px solid #f0d9a8;
+display:inline-block;
+padding-bottom:5px;
+}
+p{
+text-align:justify;
+line-height:1.7;
+font-size:17px;
+color:#333;
+}
+/* Facilities Layout */
+.facilities{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+}
+.box{
+background:#fbf3e3;
+border:2px solid #8a2d2d;
+border-radius:8px;
+padding:15px;
+text-align:center;
+width:220px;
+}
+.box h3{
+color:#5c1a1a;
+margin-bottom:8px;
+}
+.box p{
+font-size:15px;
+text-align:center;
+}
+/* News List */
+.news-item{
+border-left:4px solid #8a2d2d;
+padding:10px 15px;
+margin-bottom:12px;
+background:#fbf3e3;
+border-radius:0 6px 6px 0;
+}
+.news-item span{
+display:block;
+font-size:13px;
+color:#8a2d2d;
+font-weight:bold;
+margin-bottom:4px;
+}
+/* Charts */
+.charts{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+justify-content:center;
+}
+.chart-box{
+background:#fbf3e3;
+border:2px solid #8a2d2d;
+border-radius:8px;
+padding:15px;
+width:340px;
+}
+.chart-box h3{
+color:#5c1a1a;
+text-align:center;
+margin-top:0;
+}
+/* Button */
+.btn{
+background:#5c1a1a;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+font-size:15px;
+}
+.btn:hover{
+background:#3d1010;
+}
+/* Footer */
+footer{
+background:#5c1a1a;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Laxmi Institute of Technology</h1>
+<p>Innovate • Educate • Elevate</p>
+</header>
+
+<nav id="mainNav">
+<a href="#home" class="navlink">Home</a>
+<a href="#about" class="navlink">About</a>
+<a href="#academics" class="navlink">Academics</a>
+<a href="#facilities" class="navlink">Facilities</a>
+<a href="#campus-life" class="navlink">Campus Life</a>
+<a href="#statistics" class="navlink">Statistics</a>
+<a href="#news" class="navlink">News</a>
+<a href="#admission" class="navlink">Admission</a>
+<a href="#contact" class="navlink">Contact</a>
+</nav>
+
+<div class="banner" id="home">
+Welcome to Laxmi Institute of Technology
+</div>
+
+<div class="container">
+
+<div class="card" id="about">
+<h2>About Our Institute</h2>
+<p>
+At Laxmi Institute of Technology, we believe that great engineers are not just taught, they are shaped through
+curiosity, discipline, and real-world experience. Nestled in the peaceful surroundings of Bhilad, our campus
+brings together passionate mentors, modern infrastructure, and a spirit of innovation to transform young minds
+into tomorrow's technology leaders.
+</p>
+<button class="btn">Read More</button>
+</div>
+
+<div class="card" id="academics">
+<h2>Academics</h2>
+<p>
+Laxmi Institute of Technology offers industry-aligned undergraduate and postgraduate engineering programs
+designed with a strong foundation in core concepts along with hands-on practical exposure. Our curriculum is
+regularly updated in collaboration with industry experts to ensure students graduate with skills that matter
+in the real world.
+</p>
+</div>
+
+<div class="card" id="facilities">
+<h2>Our Facilities</h2>
+<div class="facilities">
+<div class="box">
+<h3>Football Grounds</h3>
+<p>Two full-size football grounds for practice and tournaments.</p>
+</div>
+<div class="box">
+<h3>Basketball Court</h3>
+<p>Well-maintained basketball court for daily play and competitions.</p>
+</div>
+<div class="box">
+<h3>Volleyball Court</h3>
+<p>Dedicated volleyball court for students and inter-college events.</p>
+</div>
+<div class="box">
+<h3>Pickleball Courts</h3>
+<p>Modern pickleball courts for students to relax and stay active.</p>
+</div>
+<div class="box">
+<h3>Engineering Workshops</h3>
+<p>Fully equipped workshops for hands-on practical learning.</p>
+</div>
+<div class="box">
+<h3>Hi-Tech Computer Labs</h3>
+<p>High-speed computer labs with the latest software and hardware.</p>
+</div>
+<div class="box">
+<h3>Aesthetic Cafe</h3>
+<p>A cozy campus cafe for students to unwind between classes.</p>
+</div>
+<div class="box">
+<h3>Green Campus</h3>
+<p>Lush green lawns and gardens creating a calm learning environment.</p>
+</div>
+</div>
+</div>
+
+<div class="card" id="campus-life">
+<h2>Campus Life</h2>
+<p>
+Life at Laxmi Institute of Technology goes far beyond the classroom. From technical fests and cultural
+events to sports tournaments and club activities, students get plenty of opportunities to explore their
+interests, build friendships, and create memories that last a lifetime. Our green, spacious campus offers
+the perfect balance between focused study and relaxed recreation.
+</p>
+</div>
+
+<div class="card" id="statistics">
+<h2>Campus Statistics</h2>
+<p>A quick look at student distribution and sports participation across the campus, shown using Chart.js.</p>
+<div class="charts">
+<div class="chart-box">
+<h3>Students by Department</h3>
+<canvas id="deptChart"></canvas>
+</div>
+<div class="chart-box">
+<h3>Sports Participation</h3>
+<canvas id="sportsChart"></canvas>
+</div>
+</div>
+</div>
+
+<div class="card" id="news">
+<h2>Latest News</h2>
+<div class="news-item">
+<span>15 July 2026</span>
+Admissions open for the new academic year 2026-27.
+</div>
+<div class="news-item">
+<span>02 July 2026</span>
+Annual Sports Meet to be held featuring football, basketball, volleyball, and pickleball tournaments.
+</div>
+<div class="news-item">
+<span>20 June 2026</span>
+New Hi-Tech Computer Lab inaugurated for students.
+</div>
+</div>
+
+<div class="card" id="admission">
+<h2>Admission</h2>
+<p>
+Admissions for the upcoming academic year are now open at Laxmi Institute of Technology. Interested
+candidates can visit the campus or contact our admission office for eligibility details, important dates,
+and the application process.
+</p>
+<button class="btn">Apply Now</button>
+</div>
+
+<div class="card" id="contact">
+<h2>Contact Us</h2>
+<p>
+Laxmi Institute of Technology<br>
+City: Bhilad<br>
+Phone: +91-9876543210<br>
+Email: lit@gajera.com
+</p>
+</div>
+
+</div>
+
+<footer>
+&copy; 2026 Laxmi Institute of Technology | All Rights Reserved
+</footer>
+
+<script>
+// ---- Dynamic nav: smooth scroll + highlight active section on scroll ----
+var navLinks = document.querySelectorAll(".navlink");
+var sections = [];
+for(var i=0;i<navLinks.length;i++){
+  var targetId = navLinks[i].getAttribute("href").substring(1);
+  sections.push(document.getElementById(targetId));
+}
+
+function setActiveLink(){
+  var scrollPos = window.scrollY + 100;
+  for(var i=0;i<sections.length;i++){
+    var sec = sections[i];
+    if(sec && scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight){
+      for(var j=0;j<navLinks.length;j++){
+        navLinks[j].classList.remove("active");
+      }
+      navLinks[i].classList.add("active");
+    }
+  }
+}
+window.addEventListener("scroll", setActiveLink);
+setActiveLink();
+
+// ---- Chart.js sample datasets ----
+var deptCtx = document.getElementById("deptChart").getContext("2d");
+new Chart(deptCtx, {
+  type: "bar",
+  data: {
+    labels: ["Computer", "Mechanical", "Civil", "Electrical", "IT"],
+    datasets: [{
+      label: "Number of Students",
+      data: [320, 210, 180, 150, 260],
+      backgroundColor: "#5c1a1a"
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true } }
+  }
+});
+
+var sportsCtx = document.getElementById("sportsChart").getContext("2d");
+new Chart(sportsCtx, {
+  type: "pie",
+  data: {
+    labels: ["Football", "Basketball", "Volleyball", "Pickleball"],
+    datasets: [{
+      data: [35, 25, 20, 20],
+      backgroundColor: ["#5c1a1a", "#8a2d2d", "#c98a4b", "#f0d9a8"]
+    }]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
+
+</body>
+</html>
